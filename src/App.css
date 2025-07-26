@@ -1,0 +1,348 @@
+/* Reset and base styles */
+body, #root {
+  min-height: 100vh;
+  background: #181a1b;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #f3f3f3;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Blog App Styles */
+.blog-app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.blog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #23272a;
+  padding: 1.2rem 2.5rem;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 2.5rem;
+}
+.blog-logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Primary "Create" button style */
+.create-btn {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(33,150,243,0.08);
+  text-decoration: none; /* For Link component */
+  display: inline-block;
+}
+.create-btn:hover {
+  background: #1769aa;
+}
+.create-btn.large {
+  padding: 0.9em 2.5em;
+  font-size: 1.1em;
+}
+
+/* Auth button style */
+.auth-btn {
+  background-color: transparent;
+  color: #e0e0e0;
+  border: 2px solid #555;
+  padding: 0.6em 1.4em;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.auth-btn:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-email {
+  font-weight: 600;
+  color: #ccc;
+  font-size: 0.95em;
+}
+
+.auth-btn.logout {
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.auth-btn.logout:hover {
+  background-color: #f44336;
+  color: #fff;
+}
+
+
+main {
+  padding: 0 2.5rem 2.5rem 2.5rem;
+}
+.blog-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.create-blog-action-container {
+  margin-top: 3.5rem;
+  text-align: center;
+}
+
+.blog-card {
+  background: #23272a;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s;
+  min-height: 180px;
+}
+.blog-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 6px 32px rgba(33,150,243,0.10);
+}
+.blog-card-body {
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
+}
+.blog-card-body h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.blog-card-body p {
+  color: #e0e0e0;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+.read-more-btn {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.read-more-btn:hover {
+  background: #1769aa;
+}
+.delete-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 1.5rem 1.2rem auto;
+  align-self: flex-end;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+}
+
+.create-blog-page {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  background: #23272a;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(33,150,243,0.18);
+  padding: 2.5rem;
+  text-align: left;
+}
+.create-blog-page h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.create-blog-page-form input,
+.create-blog-page-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1.2rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 6px;
+  border: 1.5px solid #444;
+  font-size: 1.1em;
+  background: #181a1b;
+  color: #fff;
+  transition: border 0.2s;
+}
+.create-blog-page-form input:focus,
+.create-blog-page-form textarea:focus {
+  border: 1.5px solid #2196f3;
+  outline: none;
+}
+
+.quill-label {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  margin-top: 1rem;
+  display: block;
+  font-weight: 500;
+}
+.quill-editor {
+  background: #fff;
+  color: #111;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+.ql-toolbar.ql-snow {
+  border-radius: 6px 6px 0 0;
+  border-color: #444;
+}
+.ql-container.ql-snow {
+  border-radius: 0 0 6px 6px;
+  min-height: 250px;
+  border-color: #444;
+  font-size: 16px;
+}
+
+.blog-detail-container {
+  background: #23272a;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: left;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 8px 32px rgba(33,150,243,0.18);
+}
+.back-btn {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.back-btn:hover {
+  text-decoration: underline;
+}
+.blog-detail-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  line-height: 1.2;
+}
+.blog-detail-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+.blog-detail-description {
+  font-style: italic;
+  color: #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  border-left: 3px solid #2196f3;
+  padding-left: 1rem;
+}
+.blog-detail-content {
+  line-height: 1.7;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+.blog-detail-content p, .blog-detail-content li { margin-bottom: 1rem; }
+.blog-detail-content h1, .blog-detail-content h2, .blog-detail-content h3 { color: #fff; margin-top: 2rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #444; }
+.blog-detail-content a { color: #64b5f6; text-decoration: none; }
+.blog-detail-content a:hover { text-decoration: underline; }
+.blog-detail-content pre { background-color: #181a1b; padding: 1rem; border-radius: 4px; white-space: pre-wrap; word-break: break-all; border: 1px solid #444; }
+.blog-detail-content blockquote { border-left: 3px solid #666; padding-left: 1rem; margin-left: 0; color: #ccc; }
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+.modal-content {
+  background: #23272a;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(33,150,243,0.18);
+  padding: 2.5rem;
+  position: relative;
+  min-width: 350px;
+  max-width: 95vw;
+}
+.close-modal {
+  position: absolute;
+  top: 1.1rem; right: 1.3rem;
+  background: none; border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+.close-modal:hover { color: #2196f3; }
+
+/* Auth Modal Styles */
+.auth-modal { max-width: 420px; }
+.auth-modal h2 { text-align: center; margin-top: 0; margin-bottom: 2rem; color: #fff; font-size: 2rem; }
+.auth-form .form-group { margin-bottom: 1.5rem; text-align: left; }
+.auth-form label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #e0e0e0; }
+.auth-form input { width: 100%; box-sizing: border-box; padding: 0.8rem 1.1rem; border-radius: 6px; border: 1.5px solid #444; font-size: 1.1em; background: #181a1b; color: #fff; transition: border 0.2s; }
+.auth-form input:focus { border: 1.5px solid #2196f3; outline: none; }
+.auth-form .auth-btn.submit { width: 100%; padding: 0.9em 1.5em; font-size: 1.1em; background-color: #2196f3; border-color: #2196f3; color: #fff; }
+.auth-form .auth-btn.submit:hover { background-color: #1769aa; border-color: #1769aa; }
+.auth-switch { text-align: center; margin-top: 1.5rem; color: #ccc; }
+.auth-switch a { color: #2196f3; text-decoration: none; font-weight: 600; cursor: pointer; }
+.auth-switch a:hover { text-decoration: underline; }
